@@ -124,7 +124,16 @@ public class JugadorDS {
 					LocalDate.of(2030, 1, 1)), // GUMA 2030
 			new Jugador("Keria", "Korea", LocalDate.of(2002, 10, 14), 0, LocalDate.of(2023, 1, 1),
 					LocalDate.of(2024, 1, 1))
-		);
+			);
+
+	public static Jugador getJugadorByName(String name) {
+		for (Jugador j : JUGADORES) {
+			if (j.getNombre().equalsIgnoreCase(name)) {
+				return j;
+			}
+		}
+		return null;
+	}
 
 	public static List<Jugador> getJugadores() {
 		return JUGADORES;

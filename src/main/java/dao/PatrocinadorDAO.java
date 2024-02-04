@@ -1,13 +1,14 @@
 package dao;
 
 import entity.Patrocinador;
-import jakarta.persistence.EntityManagerFactory;
+import jakarta.persistence.EntityManager;
 
 public class PatrocinadorDAO extends GenericDAOImpl<Patrocinador>{
 
-	public PatrocinadorDAO(EntityManagerFactory entityManagerFactory) {
-		super(entityManagerFactory);
+	public PatrocinadorDAO(EntityManager entityManager) {
+		super(entityManager);
 		// TODO Auto-generated constructor stub
 	}
+
 
 }

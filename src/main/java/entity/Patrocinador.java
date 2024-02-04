@@ -18,8 +18,6 @@ public class Patrocinador {
 	@ManyToMany(mappedBy = "patrocinadores")
 	private Set<Equipo> equipos = new HashSet<>();
 
-	public Patrocinador() {}
-
 	public Patrocinador(String nombre) {
 		super();
 		this.nombre = nombre;
@@ -53,5 +51,4 @@ public class Patrocinador {
 	public String toString() {
 		return "Patrocinador [nombre=" + nombre + ", equipos=" + equipos + "]";
 	}
-
 }

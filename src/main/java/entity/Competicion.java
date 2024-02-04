@@ -26,9 +26,7 @@ public class Competicion {
 	private Integer cantidadEquipos;
 
 	@ManyToMany
-	@JoinTable(name = "competition_team", 
-		joinColumns = @JoinColumn(name = "competition_id"), 
-		inverseJoinColumns = @JoinColumn(name = "team_id"))
+	@JoinTable(name = "competition_team", joinColumns = @JoinColumn(name = "competition_id"), inverseJoinColumns = @JoinColumn(name = "team_id"))
 	private Set<Equipo> equipos = new HashSet<>();
 
 	public Competicion() {
@@ -95,5 +93,4 @@ public class Competicion {
 		return "Competicion [nombre=" + nombre + ", fechaCreacion=" + fechaCreacion + ", cantidadJornadas="
 				+ cantidadJornadas + ", cantidadEquipos=" + cantidadEquipos + "]";
 	}
-
 }

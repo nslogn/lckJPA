@@ -10,7 +10,7 @@ public class JPAUtils {
     
     private static EntityManagerFactory buildEntityManagerFactory() {
         try {
-            return Persistence.createEntityManagerFactory("jpaLckDb");
+            return Persistence.createEntityManagerFactory("jpamysql");
         } catch (Throwable ex) {
             System.err.println("Fallo en la creación de EntityManagerFactory." + ex);
             throw new ExceptionInInitializerError(ex);

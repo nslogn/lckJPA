@@ -25,9 +25,7 @@ public class Equipo {
 	private Set<Jugador> jugadores = new HashSet<>();
 
 	@ManyToMany
-	@JoinTable(name = "team_sponsor", 
-			joinColumns = @JoinColumn(name = "team_id"), 
-			inverseJoinColumns = @JoinColumn(name = "sponsor_id"))
+	@JoinTable(name = "team_sponsor", joinColumns = @JoinColumn(name = "team_id"), inverseJoinColumns = @JoinColumn(name = "sponsor_id"))
 	private Set<Patrocinador> patrocinadores = new HashSet<>();
 
 	@ManyToMany(mappedBy = "equipos")
@@ -116,5 +114,4 @@ public class Equipo {
 				+ ", jugadores=" + jugadores + ", patrocinadores=" + patrocinadores + ", competiciones=" + competiciones
 				+ ", entrenador=" + entrenador + "]";
 	}
-
 }
